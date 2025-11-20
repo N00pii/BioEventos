@@ -1,36 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/txtBienvenida"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hola, Compañero"
-        android:textSize="20sp"
-        android:layout_marginBottom="16dp" />
+    <!-- CONTENIDO SUPERIOR: TEXTO DE BIENVENIDA -->
 
-    <Button
-        android:id="@+id/btnMisInscripciones"
+    <!-- NAVBAR INFERIOR CON 3 BOTONES -->
+    <LinearLayout
+        android:id="@+id/contenidoSuperior"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mis inscripciones" />
+        android:layout_above="@id/navbarInferior"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <Button
-        android:id="@+id/btnExplorarEventos"
+        <TextView
+            android:id="@+id/txtBienvenida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hola"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSubtitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Selecciona una opción en la barra de abajo para continuar."
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navbarInferior"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Explorar eventos"
-        android:layout_marginTop="8dp" />
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="34dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:weightSum="3">
 
-    <Button
-        android:id="@+id/btnCrearEvento"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Crear evento (Organizador)"
-        android:layout_marginTop="8dp" />
+        <!-- IZQUIERDA: MIS INSCRIPCIONES (icono persona) -->
 
-</LinearLayout>
+        <!-- CENTRO: CREAR (icono + grande) -->
+
+        <!-- DERECHA: EXPLORAR EVENTOS (icono lupa) -->
+        <Button
+            android:id="@+id/btnExplorarEventos"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:drawableTop="@android:drawable/ic_menu_search"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:text="Explorar"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnMisInscripciones"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:drawableTop="@android:drawable/ic_menu_myplaces"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:text="Inscripciones"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnCrearEvento"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:drawableTop="@android:drawable/ic_input_add"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:text="Crear"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -3,7 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="208dp"
+        android:layout_height="196dp"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="Logo BioEventos"
+        android:src="@drawable/logo_bioeventos" />
 
     <TextView
         android:id="@+id/txtTitulo"
@@ -11,36 +20,57 @@
         android:layout_height="wrap_content"
         android:text="BioEventos - Control de acceso"
         android:textSize="20sp"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/lblNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/edtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre (para registrarse)" />
+        android:hint="Ingresa tu nombre" />
+
+    <TextView
+        android:id="@+id/lblCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Correo"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp" />
 
     <EditText
         android:id="@+id/edtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Correo electrónico"
-        android:inputType="textEmailAddress"
-        android:layout_marginTop="8dp" />
+        android:hint="Ingresa tu correo"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/lblContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contraseña"
+        android:textSize="14sp"
+        android:layout_marginTop="12dp" />
 
     <EditText
         android:id="@+id/edtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        android:layout_marginTop="8dp" />
+        android:hint="Ingresa tu contraseña"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btnIniciarSesion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Iniciar sesión"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="20dp" />
 
     <Button
         android:id="@+id/btnRegistrarse"
@@ -48,5 +78,6 @@
         android:layout_height="wrap_content"
         android:text="Registrarse (Asistente)"
         android:layout_marginTop="8dp" />
+
 
 </LinearLayout>
