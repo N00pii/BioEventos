@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <EditText
+            android:id="@+id/edtTituloEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del Evento" />
+
+        <EditText
+            android:id="@+id/edtDescripcionEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtFechaHoraEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha y hora"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtLugarEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lugar"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtCuposEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cupos totales"
+            android:inputType="number"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnCrearEvento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Crear Evento"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
